@@ -8,11 +8,11 @@ public class Main {
         Scanner inputReader = new Scanner(System.in);
         String input;
 
-        System.out.println("You are in a land full of dragons. In front of you,");
-        System.out.println("You see two caves. In one cave, the dragon is friendly");
-        System.out.println("and will share his treasure with you. The other dragon");
-        System.out.println("is greedy and hungry and will eat you on sight.");
-        System.out.println("Which cave will you go into? (1 or 2)");
+        System.out.println("You are in a land full of dragons. In front of you,\n" +
+                "you see two caves. In one cave, the dragon is friendly\n" +
+                "and will share his treasure with you. The other dragon\n" +
+                "is greedy and hungry and will eat you on sight.\n" +
+                "\nWhich cave will you go into? (1 or 2)\n");
 
         //Read in the next line typed by the user
         input = inputReader.nextLine();
@@ -21,24 +21,24 @@ public class Main {
         //will continue asking for input until user gives valid input
         while(!input.startsWith("1") && !input.startsWith("2"))
         {
-            System.out.println("Invalid response, your choices are 1 or 2!");
+            System.out.println("\nInvalid response, your choices are 1 or 2!\n");
             //Read in the next line typed by the user
             input = inputReader.nextLine();
         }
 
         if(input.startsWith("1"))
         {
-            System.out.println("You approach the cave...");
-            System.out.println("It is dark and spooky...");
-            System.out.println("A large dragon jumps out in front of you! He opens his jaws and...");
-            System.out.println("Gobbles you down in one bite!");
+            System.out.println("\nYou approach the cave...\n" +
+                    "It is dark and spooky...\n" +
+                    "A large dragon jumps out in front of you! He opens his jaws and...\n" +
+                    "Gobbles you down in one bite!");
         }
         else
         {
-            System.out.println("You approach the cave...");
-            System.out.println("You hear a remix of Lady Gaga and Daft Punk...");
-            System.out.println("A tiny dragon jumps casually walks into view! He looks quite familiar...");
-            System.out.println("Jeff Bezos is now offering you a job!");
+            System.out.println("You approach the cave...\n" +
+                    "You hear a remix of Lady Gaga and Daft Punk...\n" +
+                    "A tiny dragon jumps casually walks into view! He looks quite familiar...\n" +
+                    "Jeff Bezos is now offering you a job!");
         }
     }
 }
