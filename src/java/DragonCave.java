@@ -1,11 +1,15 @@
 import java.util.Scanner;
 
-public class Main {
+public class DragonCave {
 
-    public static void main(String[] args) {
+    Scanner inputReader;
+    public DragonCave() {
+        inputReader = new Scanner(System.in);
+    }
+
+    public String getInput(){
         //Creation of scanner object and storage variable
         //to read user input from the terminal
-        Scanner inputReader = new Scanner(System.in);
         String input;
 
         System.out.println("You are in a land full of dragons. In front of you,\n" +
@@ -25,7 +29,13 @@ public class Main {
             //Read in the next line typed by the user
             input = inputReader.nextLine();
         }
+        inputReader.close();
 
+        return input;
+    }
+
+    //Prints output to console based on user input
+    public void chooseCave(String input) {
         if(input.startsWith("1"))
         {
             System.out.println("\nYou approach the cave...\n" +
