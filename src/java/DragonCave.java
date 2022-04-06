@@ -36,6 +36,7 @@ public class DragonCave {
 
     //Prints output to console based on user input
     public void chooseCave(String input) {
+
         if(input.startsWith("1"))
         {
             System.out.println("\nYou approach the cave...\n" +
