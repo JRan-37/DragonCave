@@ -19,7 +19,7 @@ public class DragonCave {
                 "\nWhich cave will you go into? (1 or 2)\n");
 
         //Read in the next line typed by the user
-        input = inputReader.nextLine();
+        input = getUserInput();
 
         //Input validation loop
         //will continue asking for input until user gives valid input
@@ -27,9 +27,8 @@ public class DragonCave {
         {
             System.out.println("\nInvalid response, your choices are 1 or 2!\n");
             //Read in the next line typed by the user
-            input = inputReader.nextLine();
+            input = getUserInput();
         }
-        inputReader.close();
 
         return input;
     }
@@ -51,5 +50,17 @@ public class DragonCave {
                     "A tiny dragon jumps casually walks into view! He looks quite familiar...\n" +
                     "Jeff Bezos is now offering you a job!");
         }
+    }
+    //Returns user input
+    private String getUserInput(){
+        String userInput;
+        try{
+            userInput = inputReader.nextLine();
+        }
+        catch(Exception e){
+            userInput = "invalid";
+        }
+
+        return userInput;
     }
 }
